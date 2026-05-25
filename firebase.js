@@ -1,35 +1,21 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-import {
-getAuth,
-GoogleAuthProvider
-} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-
-import {
-getFirestore
-} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
-
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-
-apiKey: "AIzaSyBoX1FuReGf2onOHS8GlYq8jc5b5398hQU",
-
-authDomain: "banhang-b31dd.firebaseapp.com",
-
-projectId: "banhang-b31dd",
-
-storageBucket: "banhang-b31dd.appspot.com",
-
-messagingSenderId: "634655097273",
-
-appId: "1:634655097273:web:899337e325e046eb91f668"
-
+  apiKey: "AIzaSyDExlGshIrB0YI-bSrAPNBO3zwHpbXb8NY",
+  authDomain: "shopreal-62678.firebaseapp.com",
+  projectId: "shopreal-62678",
+  storageBucket: "shopreal-62678.firebasestorage.app",
+  messagingSenderId: "768646531769",
+  appId: "1:768646531769:web:21f820938ffa2136c2e968",
+  measurementId: "G-R0X07VQ9CL"
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-export const auth = getAuth(app);
-
-export const db = getFirestore(app);
-
-export const provider =
-new GoogleAuthProvider();
+const analytics = getAnalytics(app);
